@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Example</title>
+        <link rel="stylesheet" href="../src/css/reset.css"/>
+        <link rel="stylesheet" href="../src/css/index.css"/>
+    </head>
+    <body>
+        <section> 
+            <div class="slider" rel="slider">
+                <ul>
+                    <li>Slider 1</li>
+                    <li>Slider 2</li>
+                    <li>Slider 3</li>
+                    <li>Slider 4</li>
+                </ul>
+                <div class="pagination" rel="pagination"></div>
+            </div>
+        </section>
+        <script src="../src/js/slider.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function (e) {
+                var slider = new Slider({
+                    slider: document.querySelector('[rel=slider]'),
+                    pagination: '[rel=pagination]',
+                    paginationOption: {
+                        className: 'page',
+                        activeClassName: 'active'
+                    }
+                });
+            })
+        </script>
+    </body>
+</html>
